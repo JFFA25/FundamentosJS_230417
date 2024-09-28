@@ -13,6 +13,7 @@ básicos de logica de programación.
 |1.|Metodologia de Evaluacion|1|⏳Finalizada|
 |2.|Inicialización del Proyecto de Fundamentos de JS|5|⏳Finalizada|
 |3.|Declaración de Variables(Undefined/Boolean/Number)|10|⏳Finalizada|
+|4.|Introduccion a Objetos(String/BigInt/Symbol/Null/Function)|6|⏳Finalizada|
 
 ## Autor
 José Francisco Flores Amador
