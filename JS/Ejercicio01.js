@@ -43,3 +43,4 @@ console.log("Genial , Ya te voy conociendo mejor , ahora se que tu naciste el",m
 console.log(`Creo que es ${miColorFavorito}, le atine?`); // La manera de mezclar textos fijos con el valor actual de las variables se le conoce como interpolacion y deben iniciar y finalizar on un backtic - tilde inversa
 console.log("miFechaNacimiento es de tipo:",typeof(miFechaNacimiento))
 console.log("miColorFavorito es de tipo:",typeof(miColorFavorito))
+//Cambios aceptados para la fusion del ramal Paco_Practoica03
