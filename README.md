@@ -16,6 +16,7 @@ básicos de logica de programación.
 |4.|Introduccion a Objetos(String/BigInt/Symbol/Null/Function)|6|⏱️ Finalizada|
 |5.|Introducción a Objetos|19|🟢  Activa|
 |6.|Repaso de Arreglos (Arrays)|  Pendiente |🟢  Activa|
+|  |                           |            |           |
 
 ## Autor
 José Francisco Flores Amador
