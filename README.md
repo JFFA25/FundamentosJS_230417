@@ -10,13 +10,13 @@ básicos de logica de programación.
 
 |No.|Descripción|Potenciadores|Estatus|
 |--|--|--|--|
-|1.|Metodologia de Evaluacion|1|⏱️ Finalizada|
-|2.|Inicialización del Proyecto de Fundamentos de JS|5|⏱️ Finalizada|
-|3.|Declaración de Variables(Undefined/Boolean/Number)|10|⏱️ Finalizada|
-|4.|Introduccion a Objetos(String/BigInt/Symbol/Null/Function)|6|⏱️ Finalizada|
-|5.|Introducción a Objetos|19|⏱️ Finalizada|
-|6.|Repaso de Arreglos (Arrays)|19|🟢  Activa|
-|  |                           |            |           |
+|1.|Metodologia de Evaluacion|1|⌛Finalizada|
+|2.|Inicialización del Proyecto de Fundamentos de JS|5|⌛Finalizada|
+|3.|Declaración de Variables(Undefined/Boolean/Number)|10|⌛Finalizada|
+|4.|Introduccion a Objetos(String/BigInt/Symbol/Null/Function)|6|⌛Finalizada|
+|5.|Introducción a Objetos|19|⌛Finalizada|
+|6.|Repaso de Arreglos (Arrays)|18|⌛Finalizada|
+|7.|Repaso de Ciclos y sentencias de control|--|✅ Activa|
 
 ## Autor
 José Francisco Flores Amador
