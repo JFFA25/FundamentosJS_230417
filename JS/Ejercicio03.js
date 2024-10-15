@@ -275,7 +275,7 @@ console.log("Impeimimos la estructura y valores en Objetos PRODUCTO")
 console.log("Imprimimos la estructura y valores de Objetos PEDIDO")
  console.table(Pedido);
 
-console.log("%c10- Union de Objetos usando el SPEAD OPERATOR (ASAY))", style_console);
+console.log("%c11- Union de Objetos usando el SPEAD OPERATOR (ASAY))", style_console);
 
 console.table(Producto);
 console.table(Comprador);

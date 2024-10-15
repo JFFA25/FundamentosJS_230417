@@ -124,56 +124,72 @@ arregloMixto.unshift("Raúl Pasos")
 console.log("La lista atual es:")
 console.table(estudiantes)
 
+// 7.- Eliminar el elemento de un arreglo en la última posición (POP)
+console.log("%c7.- Eliminar el elemento de un arreglo en la última posición (POP)", style_console);
 
-console.log("%c7.- Eliminar el elemento de un arreglo en la última posición (POP)",style_console)
-console.log("El arreglo tiene los siguientes elementos: ")
-console.table(estudiantes)
-console.log("Para este caso eliminaremos a Obed Gúzman, en la última posición. ")
-console.log("Después de eliminar el elemento el arreglo quedo de la siguiente manera:")
+// Mostrar el arreglo actual
+console.log("El arreglo tiene los siguientes elementos: ");
+console.table(estudiantes);
+
+// Eliminar el último elemento del arreglo
+console.log("Para este caso eliminaremos a Obed Gúzman, en la última posición.");
+console.log("Después de eliminar el elemento el arreglo quedó de la siguiente manera:");
 arregloMixto.pop();
-console.table(estudiantes)
+console.table(estudiantes);
 
+// 8.- Eliminar el elemento de un arreglo en la primera posición (SHIFT)
+console.log("%c8.- Eliminar el elemento de un arreglo en la primera posición (SHIFT)", style_console);
 
-console.log("%c8.- Eliminar el elemento de un arreglo en la primera posición (SHIFT)",style_console)
-console.log("El arreglo tiene los siguientes elementos:")
-console.table(estudiantes)
-console.log("Para este caso eliminaremos a Raúl Pasos, en la primera posición.")
+// Mostrar el arreglo actual
+console.log("El arreglo tiene los siguientes elementos:");
+console.table(estudiantes);
+
+// Eliminar el primer elemento del arreglo
+console.log("Para este caso eliminaremos a Raúl Pasos, en la primera posición.");
 estudiantes.shift();
-console.log("Después de eliminar el elemento del arreglo quedo de la siguiente manera: ")
+console.log("Después de eliminar el elemento el arreglo quedó de la siguiente manera:");
 console.table(estudiantes);
 
+// 9.- Modificar un arreglo en un arreglo nuevo con posiciones definidas (SPLICE)
+console.log("%c9.- Modificar un arreglo en un arreglo nuevo con posiciones definidas (SPLICE)", style_console);
 
-console.log("%c9.- Modificar un arreglo en un arreglo nuevo con posiciones definidas (SPLICE)", style_console)
-console.log("El arreglo original tiene los elementos:")
+// Mostrar el arreglo original
+console.log("El arreglo original tiene los elementos:");
 console.table(estudiantes);
-console.log("Dividir el arreglo en uno nuevo eliminando ciertos elementos en base a su posicion")
-estudiantes.splice(2)
-console.table(estudiantes)
 
-console.log("Se agregaron 5 nuevos estudiates , por lo que el arreglo es : ")
-console.log("Dividir el arreglo y agregar mas nombres a la lista de estuidantes")
+// Eliminar elementos del arreglo basados en su posición
+console.log("Dividir el arreglo en uno nuevo eliminando ciertos elementos en base a su posición");
+estudiantes.splice(2);
+console.table(estudiantes);
 
-estudiantes.push("Francisco Garcia")
-estudiantes.push("Chester Bennington")
-estudiantes.push("Edwin Cruz")
-estudiantes.push("Diego Miguel")
-estudiantes.push("Luis Humberto")
-console.table(estudiantes)
+// Agregar nuevos estudiantes al arreglo
+console.log("Se agregaron 5 nuevos estudiantes, por lo que el arreglo es:");
+console.log("Dividir el arreglo y agregar más nombres a la lista de estudiantes");
+estudiantes.push("Francisco Garcia");
+estudiantes.push("Chester Bennington");
+estudiantes.push("Edwin Cruz");
+estudiantes.push("Diego Miguel");
+estudiantes.push("Luis Humberto");
+console.table(estudiantes);
 
-console.log("Vamos a meter a  \"Rafa Navejas\" en los elementos de la posicion 0 y 1")
-estudiantes.splice(1,0,"Rafa Navejas")
-console.log("El resultado es : ")
-console.table(estudiantes)
+// Insertar a "Rafa Navejas" en la posición 0 y 1
+console.log("Vamos a meter a \"Rafa Navejas\" en los elementos de la posición 0 y 1");
+estudiantes.splice(1, 0, "Rafa Navejas");
+console.log("El resultado es:");
+console.table(estudiantes);
 
-//También splice sirve para reemplazar elementos por otros, en este caso remplazaremos a "Francisco Garcia" por "Ricardo Luna"
+// Reemplazar elementos del arreglo usando splice
+console.log("Ahora vamos a reemplazar a \"Al Farias\" en los elementos de la posición por \"Jorge Siddhartha\"");
+estudiantes.splice(0, 1, "Siddhartha");
+console.log("Resultando en:");
+console.table(estudiantes);
 
-console.log("Ahora vamos a remplazar a \"Al Farias\" en los elementos de la posición por \"Jorge Siddhartha\"")
-estudiantes.splice(0,1, "Siddhartha")
-console.log("Resultando en:")
-console.table(estudiantes)
+// 10.- Métodos para la manipulación de Arreglos INMUTABLES
+console.log("%c10.- Métodos para la manipulación de Arreglos INMUTABLES", style_console);
 
-console.log("%c10.- Metodos para la manipulación de Arreglos INMUTABLES", style_console);
-let signosZodiacales= ["Aries", "Tauro", "Geminis", "Cáncer", "Leo", "Virgo", "Libra", "Escorpio", "Sagitario", "Capricornio", "Acuario", "Piscis"]
+// Declarar un arreglo de signos zodiacales
+let signosZodiacales = ["Aries", "Tauro", "Géminis", "Cáncer", "Leo", "Virgo", "Libra", "Escorpio", "Sagitario", "Capricornio", "Acuario", "Piscis"];
+
 
 //congelamos el arreglo volviendolo INMUTABLE
 Object.freeze(signosZodiacales);
@@ -240,3 +256,38 @@ function filtraPrimeros5 (arregloEstudiantes){
     return listaFiltrada;
     
 }
+console.log("%c12.- Filtrado de Elementos dentro de un arreglo utilizando el método MAP, en el que necesitemos transformarlos",style_console);
+
+console.log("Imprimimos los elementos actuales de signosZodiacales:")
+console.table(signosZodiacales)
+//Que podemos hacer si necesitamos el mismo arreglo pero ahora con todos suss elementos con letras mayúsculas
+console.log("Los signosZodiacales despues de aplicar toUpperCase para que todos esten en mayusculas")
+console.table(signosZodiacales.map(signoZodiacal=>signoZodiacal.toUpperCase()))
+
+
+// Reducción de elementos de un arreglo, se usa cuando debemos hacer operaciones matemáticas o cuantitativas a un arreglo, como obtener totales, la idea es reducir la lista a un valor más simplificado.
+
+const costosListaCompras = [15,52.50,16.90,32.50,28,105,45.2,94.10]
+// Como podemos calcular el total de una lista de costos de un carrito de compras
+// Mostrar todos los precios de la lista de compras
+console.log("Todos los precios:");
+console.table(costosListaCompras);
+
+// Calcular y mostrar el total de la compra usando reduce()
+console.log(`El total de la compra es: ${costosListaCompras.reduce((total, precio) => total + precio, 0).toFixed(2)}`);
+
+// 13.- Método Reduce()
+console.log("%c13.- Método Reduce()", style_console);
+
+// Lista de costos de un carrito de compras
+const costosListaCompra = [15, 52.50, 16.90, 32.50, 28, 105, 45.2, 94.10];
+
+// Mostrar los precios de la lista de compras
+console.log("Los precios son:");
+console.table(costosListaCompra);
+
+// Calcular y mostrar el total de la compra usando reduce()
+console.log(`El total de la compra es: ${costosListaCompra.reduce((total, precio) => total + precio, 0).toFixed(2)}`);
+/*
+- El método reduce() aplica una función a un acumulador y a cada elemento de un array (de izquierda a derecha) para reducirlo a un único valor.
+*/

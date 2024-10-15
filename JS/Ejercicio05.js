@@ -4,81 +4,85 @@ const style_console = `background: ${bg}; color: white; border-radius: 6px; padd
 
 
 
-//Personalización de las salidas a consola
+// Personalización de las salidas a consola
+// Se muestra un aviso en la consola indicando el propósito de la práctica.
+console.warn("Práctica 07: Repaso de Ciclos y sentencias de control ");
+console.log("%c1.- Si/Entoces ... (IF)", style_console);
+// Se utiliza un estilo personalizado para imprimir el texto en la consola.
+// El comentario explica que el siguiente bloque de código se basa en una prueba lógica que evalúa verdadero o falso.
 
-console.warn("Práctica 07: Repaso de Ciclos y sentencias de control ")
+// Obtiene la fecha y hora actual
+let fechaActual = new Date();
+// Imprime la fecha actual en formato de texto legible
+console.log(`Hola, la fecha de hoy es: ${fechaActual.toDateString()}`);
 
-console.log("%c1.- Si/Entoces ... (IF)", style_console)
-
-//Le indica al programa que hacer o que no en base a una prueba lógica de verdadero o falso 
-let fechaActual=new Date();
-console.log(`Hola, la fecha de hoy es: ${fechaActual.toDateString()}`)
-
-//Y si la necesitamos en formato local(?)
-
-const fechaLocalMX= fechaActual.toLocaleString('es-MX', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: false
+// Se necesita la fecha en formato local de México
+const fechaLocalMX = fechaActual.toLocaleString('es-MX', {
+    weekday: 'long', // Día de la semana
+    year: 'numeric', // Año en formato numérico
+    month: 'long',   // Nombre del mes completo
+    day: 'numeric',  // Día del mes
+    hour: 'numeric', // Hora en formato numérico
+    minute: 'numeric', // Minutos
+    second: 'numeric',  // Segundos
+    hour12: false      // Usar formato de 24 horas
 });
 
-console.log(`en formato local (México): ${fechaLocalMX}`)
+// Imprime la fecha en formato local
+console.log(`en formato local (México): ${fechaLocalMX}`);
 
-//Si es antes de las doce saluda con buenos días
+// Condición que verifica si la hora actual es antes de las 12
+if (fechaActual.getHours() < 12) 
+    console.log(`Buenos días, hoy es ${fechaLocalMX}`); // Saludo matutino
 
-if(fechaActual.getHours()<12)
-    console.log(`Buenos días, hoy es ${fechaLocalMX}`)
-
-//Existe un extensor de la sentencia if(Sí) que es else (En Caso contrario)
-if(fechaActual.getMonth()<=6)
-    console.log(`Estas en la primera mitad del año`)
+// Condición que determina si estamos en la primera o segunda mitad del año
+if (fechaActual.getMonth() <= 6)
+    console.log(`Estas en la primera mitad del año`);
 else
-    console.log(`Estas en la segunda mitad del año.`)
+    console.log(`Estas en la segunda mitad del año.`);
 
+// Se establecen fechas de inicio de las estaciones del año
+const anio = fechaActual.getFullYear(); // Año actual
+let inicioPrimavera = new Date(anio, 2, 21); // 21 de marzo
+let inicioVerano = new Date(anio, 5, 21);    // 21 de junio
+let inicioOtonio = new Date(anio, 8, 23);    // 23 de septiembre
+let inicioInvierno = new Date(anio, 11, 21); // 21 de diciembre
 
-//que pasa si la validación tiene varias operaciones 
-const anio=fechaActual.getFullYear();
-let inicioPrimavera=new Date(anio, 2, 21);
-let inicioVerano=new Date(anio, 5, 21);
-let inicioOtonio=new Date(anio, 8, 23);
-let inicioInvierno=new Date(anio, 11, 21);
+// Variable para almacenar la estación actual
 let estacion;
-let horarioVerano=false;
+let horarioVerano = false; // Inicializa la variable para el horario de verano
 
-if(fechaActual>=inicioPrimavera && fechaActual<inicioVerano){
+// Condiciones para determinar en qué estación del año estamos
+if (fechaActual >= inicioPrimavera && fechaActual < inicioVerano) {
     console.log(`Estamos en PRIMAVERA`);
-    console.log("Inicia la floración de muchas plantas.")
-    console.log("Los días son más largos y las noches más cortas.")
-    console.log("Muchos animales despiertan de la hibernación.")
-    estacion="Primavera";
-    horarioVerano=true;
-} else if(fechaActual>=inicioVerano&&fechaActual<inicioOtonio){
+    console.log("Inicia la floración de muchas plantas.");
+    console.log("Los días son más largos y las noches más cortas.");
+    console.log("Muchos animales despiertan de la hibernación.");
+    estacion = "Primavera"; // Asigna la estación
+    horarioVerano = true; // Indica que estamos en horario de verano
+} else if (fechaActual >= inicioVerano && fechaActual < inicioOtonio) {
     console.log("Estamos en VERANO");
-    console.log("En esta temporada abundan los días soleados y calurosos.")
-    console.log("En esta temporada el índice de turismo vacacional sube.")
-    console.log("Mucha gente busca realizar actividades al aire.")
-    estacion="Verano";
-    horarioVerano=true;
-}else if(fechaActual>=inicioOtonio&&fechaActual<inicioInvierno){
-    console.log("Estamos en OTOÑO")
-    console.log("Los árboles suelen cambiar de follaje.")
-    console.log("Se registrarán temperaturas más templadas.")
-    console.log("Los animales comienzan con la recolección de alimento y preparan sus espacios para la hibernación, incluso algunas aves migran.")
-    estacion="Otoño";
-    horarioVerano=false;
+    console.log("En esta temporada abundan los días soleados y calurosos.");
+    console.log("En esta temporada el índice de turismo vacacional sube.");
+    console.log("Mucha gente busca realizar actividades al aire.");
+    estacion = "Verano"; // Asigna la estación
+    horarioVerano = true; // Indica que estamos en horario de verano
+} else if (fechaActual >= inicioOtonio && fechaActual < inicioInvierno) {
+    console.log("Estamos en OTOÑO");
+    console.log("Los árboles suelen cambiar de follaje.");
+    console.log("Se registrarán temperaturas más templadas.");
+    console.log("Los animales comienzan con la recolección de alimento y preparan sus espacios para la hibernación, incluso algunas aves migran.");
+    estacion = "Otoño"; // Asigna la estación
+    horarioVerano = false; // Indica que no estamos en horario de verano
 } else {
-    console.log("Estamos en INVIERNO")
-    console.log("En esta temporada los días son más cortos y las noches más largas.")
-    console.log("En algunas regiones suele nevar.")
-    console.log("Dado las bajas temperaturas, se recomienda abrigarse.")
-    estacion="Invierno";
-    horarioVerano=false;
+    console.log("Estamos en INVIERNO");
+    console.log("En esta temporada los días son más cortos y las noches más largas.");
+    console.log("En algunas regiones suele nevar.");
+    console.log("Dado las bajas temperaturas, se recomienda abrigarse.");
+    estacion = "Invierno"; // Asigna la estación
+    horarioVerano = false; // Indica que no estamos en horario de verano
 }
+
 
 
 
@@ -330,29 +334,32 @@ for(let i in seriesTrending){
   console.log(`---------------------`)
 }
 
-console.log("%c11.-Ciclos interrumpidos para cada uno de los elementos del arreglo (FOR EACH)",style_console)
+// Se muestra un mensaje en la consola indicando que se abordará el uso del ciclo forEach para recorrer un arreglo.
+console.log("%c11.-Ciclos interrumpidos para cada uno de los elementos del arreglo (FOR EACH)", style_console);
 
-//Lista de series de TV trending con temporadas , viewers y reproducciones
-let seriesTrending2= [
-  { nombre : "Rick y Morty",temporadas:7,totalViewers:"800000",totalReprods:"12000"},
-  { nombre : "One Ponch Man",temporadas:2,totalViewers:"90000",totalReprods:"220000"},
-  { nombre : "La historia de Jeffry Dhamer",temporadas:3,totalViewers:"150000",totalReprods:"252000"},
-  { nombre : "Estamos Muertos",temporadas:1,totalViewers:"80000",totalReprods:"250000"},
-  { nombre : "Un Show Mas",temporadas:3,totalViewers:"7000",totalReprods:"50000"},
+// Se define un arreglo de objetos que contiene información sobre series de TV en tendencia, incluyendo el nombre, número de temporadas, total de espectadores y reproducciones.
+let seriesTrending2 = [
+  { nombre: "Rick y Morty", temporadas: 7, totalViewers: "800000", totalReprods: "12000" },
+  { nombre: "One Punch Man", temporadas: 2, totalViewers: "90000", totalReprods: "220000" },
+  { nombre: "La historia de Jeffry Dahmer", temporadas: 3, totalViewers: "150000", totalReprods: "252000" },
+  { nombre: "Estamos Muertos", temporadas: 1, totalViewers: "80000", totalReprods: "250000" },
+  { nombre: "Un Show Más", temporadas: 3, totalViewers: "7000", totalReprods: "50000" },
 ];
 
-//Usando FOR..HEACH para recorrer cada serie y calculcar su calificación
-seriesTrending2.forEach((serie,index)=>{
-  let calificación = (serie.totalReprods/serie.totalViewers).toFixed(2);
-  //Calcula la calificación y la redondea a 2 a decimales
-  console.log(`Serie ${index+1}:`);
+// Se utiliza el método forEach para recorrer cada serie en el arreglo y calcular su calificación.
+seriesTrending2.forEach((serie, index) => {
+  // Se calcula la calificación como el cociente entre total de reproducciones y total de espectadores.
+  let calificación = (serie.totalReprods / serie.totalViewers).toFixed(2); // Se redondea a 2 decimales.
+  
+
+  console.log(`Serie ${index + 1}:`); 
   console.log(`Nombre ${serie.nombre}:`);
-  console.log(`Vistas ${serie.totalViewers}:`)
-  console.log(`Reproduciones ${serie.totalViewers}:`)
-  console.log(`Calificacion ${calificación}:`)
-  console.log(`---------------------`)
-}
-)
+  console.log(`Vistas ${serie.totalViewers}:`); 
+  console.log(`Reproducciones ${serie.totalReprods}:`);
+  console.log(`Calificación ${calificación}:`); 
+  console.log(`---------------------`); 
+});
+
 
 let seriesDeseadas = ["Rick y Morty","One Ponch Man","Un Show Mas"];
 
@@ -362,5 +369,7 @@ let seriesConTresTemporadas = seriesTrending2
     .filter(nombre=> seriesDeseadas.includes(nombre));//Filtramos las que estan en la lista de series deseadas
 
 //Mostramos los resultados
-console.log("Series con 3 temporadas que estan en la lista deseada: ")
-console.log(seriesConTresTemporadas);
+// console.log("Series con 3 temporadas que estan en la lista deseada: ")
+// console.log(seriesConTresTemporadas);
+console.log("Series con 3 temporadas que estan en la lista deseada(TABLA): ")
+console.table(seriesConTresTemporadas);
