@@ -16,7 +16,7 @@ básicos de logica de programación.
 |4.|Introduccion a Objetos(String/BigInt/Symbol/Null/Function)|6|⌛Finalizada|
 |5.|Introducción a Objetos|19|⌛Finalizada|
 |6.|Repaso de Arreglos (Arrays)|18|⌛Finalizada|
-|7.|Repaso de Ciclos y sentencias de control|16|✅ Activa|
+|7.|Repaso de Ciclos y sentencias de control|16|⌛Finalizada|
 
 ## Autor
 José Francisco Flores Amador

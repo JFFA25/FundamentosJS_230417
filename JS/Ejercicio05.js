@@ -340,9 +340,9 @@ console.log("%c11.-Ciclos interrumpidos para cada uno de los elementos del arreg
 // Se define un arreglo de objetos que contiene información sobre series de TV en tendencia, incluyendo el nombre, número de temporadas, total de espectadores y reproducciones.
 let seriesTrending2 = [
   { nombre: "Rick y Morty", temporadas: 7, totalViewers: "800000", totalReprods: "12000" },
-  { nombre: "One Punch Man", temporadas: 2, totalViewers: "90000", totalReprods: "220000" },
-  { nombre: "La historia de Jeffry Dahmer", temporadas: 3, totalViewers: "150000", totalReprods: "252000" },
-  { nombre: "Estamos Muertos", temporadas: 1, totalViewers: "80000", totalReprods: "250000" },
+  { nombre: "One Punch Man", temporadas: 3, totalViewers: "90000", totalReprods: "220000" },
+  { nombre: "La historia de Jeffry Dahmer", temporadas: 2, totalViewers: "150000", totalReprods: "252000" },
+  { nombre: "Estamos Muertos", temporadas: 3, totalViewers: "80000", totalReprods: "250000" },
   { nombre: "Un Show Más", temporadas: 3, totalViewers: "7000", totalReprods: "50000" },
 ];
 
@@ -369,7 +369,7 @@ let seriesConTresTemporadas = seriesTrending2
     .filter(nombre=> seriesDeseadas.includes(nombre));//Filtramos las que estan en la lista de series deseadas
 
 //Mostramos los resultados
-// console.log("Series con 3 temporadas que estan en la lista deseada: ")
-// console.log(seriesConTresTemporadas);
-console.log("Series con 3 temporadas que estan en la lista deseada(TABLA): ")
-console.table(seriesConTresTemporadas);
+//console.log("Series con 3 temporadas que estan en la lista deseada: ")
+//console.log(seriesConTresTemporadas);
+console.warn("Series con 3 temporadas que estan en la lista deseada(TABLA): ")
+console.log(seriesConTresTemporadas)
